@@ -47,15 +47,12 @@ const addTask = function () {
 };
 
 const editTask = function () {
-
   const listItem = this.parentNode;
-
   const editInput = listItem.querySelector("input[type=text]");
   const label = listItem.querySelector("label");
   const editBtn = listItem.querySelector(".edit");
-  const containsClass = listItem.classList.contains("editMode");
 
-  if (containsClass) {
+  if (listItem.classList.contains("editMode")) {
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
   } else {
