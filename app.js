@@ -13,7 +13,7 @@ const incompleteTaskHolder = document.getElementById("incompleteTasks"); //ul of
 const completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
 
 //New task list item
-const createNewTaskElement = function (taskString) {
+const createTaskElement = function (taskString) {
   const listItem = document.createElement("li");
 
   //input (checkbox)
@@ -56,7 +56,7 @@ const createNewTaskElement = function (taskString) {
 const addTask = function () {
   //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
-  const listItem = createNewTaskElement(taskInput.value);
+  const listItem = createTaskElement(taskInput.value);
 
   //Append listItem to incompleteTaskHolder
   incompleteTaskHolder.appendChild(listItem);
